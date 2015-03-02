@@ -4,29 +4,6 @@ import g4p_controls.*;
 int ranw = (int) random(200);
 
 PGraphics mainSketch;
-/*
-PGraphics, HVA ER DETTE?!:
-Dette er en måte å lage lag(layers).
-Èn PGgraphics element er ett lag. 
-For å tegne på layeren:
-Hvis layeren heter mainSketch, må du  
-skrive
-mainSketch.beginDraw(); for å begynne å tegne
-du bruker vanlige funksjoner, du må bare skrive navnet
-på layeren før du tegner.
-Mao: mainSketch.rect(100, 100, 100, 200); osv.
-
-Når du er ferdig å tegne, må du bruke
-image(mainSketch, xpos, ypos); Dette gjør at layeren faktisk vises på skjermen.
-
-
-
-TLDR Version:
-PGraphics laga ny layer
-bruk navnet på layeren for å tegne. f.eks mainSketch.
-du må ha mainSketch.BeginDraw(); før du begynner, og mainSketch.endDraw() på slutten.
-Så image(mainSketch, xpos, ypos);
-*/
 
 
 public void setup(){

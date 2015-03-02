@@ -1,9 +1,10 @@
 // Need G4P library
 import g4p_controls.*;
-
-int ranw = (int) random(200);
+int state = 0;
 
 PGraphics mainSketch;
+
+animatedLoops aloop = new animatedLoops();
 /*
 PGraphics, HVA ER DETTE?!:
  Dette er en måte å lage lag(layers).
@@ -40,8 +41,17 @@ public void setup() {
 
 public void draw() {
   background(180);
-  drawRandomRects();
-  image(mainSketch, width-mainSketch.width-10, 10);
+  switch(state) {
+  case 1:
+    drawRandomRects(); 
+    break;
+
+  case 2:
+    if (aloop.prepareState != true)
+      aloop.prepareDraw();
+    aloop.drawing();
+    break;
+  }
 }
 
 void drawRandomRects() {
@@ -55,6 +65,7 @@ void drawRandomRects() {
   mainSketch.fill(random(255), random(255), random(255));
   mainSketch.rect(random(mainSketch.width), random(mainSketch.height), ranw, ranw);
   mainSketch.endDraw();
+  image(mainSketch, width-mainSketch.width-10, 10);
 }
 // Use this method to add additional statements
 // to customise the GUI controls

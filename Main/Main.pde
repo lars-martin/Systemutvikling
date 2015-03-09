@@ -67,6 +67,10 @@ void drawRandomRects() {
   mainSketch.endDraw();
   image(mainSketch, width-mainSketch.width-10, 10);
 }
+
+void resetCanvas(){
+  aloop.prepareDraw();
+}
 // Use this method to add additional statements
 // to customise the GUI controls
 public void customGUI() {
